@@ -1,53 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Team — ReFaz0x</title>
-  <meta name="description" content="The founders behind ReFaz0x." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReFaz0x - Team</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .logo {
+      width: 130%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    .team-avatar {
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid #ddd;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1a73e8;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .team-member {
+      text-align: center;
+      margin: 40px 20px 0 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    
-    <a href="index.html" class="chip home-btn">🏠 Home</a>
-    
-    <header class="top">
-      <img src="logo.png" alt="ReFaz0x Logo" class="avatar" style="object-fit: contain; background: white;" />
-      <div class="info">
-        <h1>Team</h1>
-        <p class="lead">The founders behind ReFaz0x.</p>
-      </div>
-    </header>
+  <header>
+    <img src="images/logo.png" alt="ReFaz0x Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="section">
-      <div class="team-grid">
-        <article class="team-member">
-          <img src="verber-avatar.jpg" alt="Verber Souza" class="avatar" style="margin: 0 auto 1rem; display: block;" />
-          <h3><a href="https://verbersouza.github.io" target="_blank" rel="noopener">Verber Souza</a></h3>
-          <p class="aka">aka Verbal</p>
-          <p>Verber Souza is a lawyer and blockchain project manager creating solutions at the intersection of technology, law, and decentralized systems to address complex humanitarian challenges. With expertise in both legal frameworks and technical implementation, Verber bridges the gap between traditional legal structures and emerging blockchain technologies. His work focuses on ensuring that innovative Web3 projects can operate effectively within existing regulatory environments while maximizing their social impact potential.</p>
-        </article>
+  <main>
+    <h1>Our Team</h1>
+    <p>Meet the people driving ReFaz0x’s mission to foster Web3 adoption and research in Latin America.</p>
 
-        <article class="team-member">
-          <img src="marcelo-avatar.png" alt="Marcelo Silva" class="avatar" style="margin: 0 auto 1rem; display: block;" />
-          <h3><a href="https://marcelorefi.github.io" target="_blank" rel="noopener">Marcelo Silva</a></h3>
-          <p class="aka">aka MarceloReFi</p>
-          <p>Marcelo Silva is a Web3 researcher and founder exploring blockchain, regenerative finance, and local-first innovation in Latin America. Based in Brazil, he is an enthusiast of the intersection of Web3, Climate, and International Development from a civilian point of view. His work focuses on how decentralized technologies can create sustainable solutions for environmental and social challenges in the region. Marcelo brings deep technical expertise in blockchain systems and a passion for community-driven approaches to technology development.</p>
-        </article>
-      </div>
-    </section>
+    <div class="team-member">
+      <img src="images/verber.jpg" alt="Verber Souza" class="team-avatar">
+      <h3>Verber Souza</h3>
+      <p>Blockchain & Education Lead</p>
+    </div>
 
-    <footer>
-      <div>© <span id="y"></span> ReFaz0x.</div>
-    </footer>
-  </div>
+    <div class="team-member">
+      <img src="images/marcelo.jpg" alt="Marcelo Silva" class="team-avatar">
+      <h3>Marcelo Silva</h3>
+      <p>Web3 Research & Strategy</p>
+    </div>
+  </main>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <footer>
+    <p>&copy; 2025 ReFaz0x. All rights reserved.</p>
+  </footer>
 </body>
 </html>
