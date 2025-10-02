@@ -1,64 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReFaz â€” Philosophy, Culture & Web3</title>
-  <link rel="stylesheet" href="refaz.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReFaz0x - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline adjustment for logo size */
+    .logo {
+      width: 130%; /* Increased by 30% */
+      max-width: 300px; /* optional max width */
+      height: auto;
+    }
+
+    /* Basic avatar styling */
+    .team-avatar {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    /* Link hover style */
+    a {
+      text-decoration: none;
+      color: #1a73e8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <span class="brand-badge" aria-hidden="true"></span>
-      <h1>REFAZ</h1>
-    </a>
-    <div class="menu">
-      <a href="about.html">About</a>
-      <a href="media.html">Media</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
+  <header>
+    <img src="images/logo.png" alt="ReFaz0x Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="hero-card">
-      <div class="kicker">Philosophy â€¢ Culture â€¢ Web3</div>
-      <h2>ReFaz is the research & creation studio of <em>Marcelo Silva</em> & <em>Verber Souza</em>.</h2>
-      <p>We investigate and apply Web3 with a critical eye, pop language, and commitment to real impact â€” from local-first experiments to institutional dialogues.</p>
-      <div class="cta-row">
-        <a class="chip purple" href="about.html">Meet the team</a>
-        <a class="chip yellow" href="media.html">Read content</a>
-        <a class="chip green" href="projects.html">See projects</a>
+  <main>
+    <section id="intro">
+      <h1>Welcome to ReFaz0x</h1>
+      <p>Exploring Web3, ReFi, and decentralized solutions in Latin America.</p>
+    </section>
+
+    <section id="highlights">
+      <h2>Latest Initiatives</h2>
+      <ul>
+        <li><a href="publications.html">Explore our publications</a></li>
+        <li><a href="projects.html">Discover our projects</a></li>
+      </ul>
+    </section>
+
+    <section id="team-preview">
+      <h2>Meet Our Team</h2>
+      <div class="team-member">
+        <img src="images/verber.jpg" alt="Verber Souza" class="team-avatar">
+        <p>Verber Souza</p>
+        <p>Blockchain & Education Lead</p>
       </div>
-    </div>
-    <div class="media-block">REFAZ BRANDING / ART</div>
-  </section>
+      <!-- Add other team members as needed -->
+    </section>
+  </main>
 
-  <section class="section">
-    <h2>Highlights</h2>
-    <div class="grid">
-      <article class="card" style="grid-column: span 6;">
-        <p class="meta">Research</p>
-        <h3>Stablecoins, RWAs & ReFi in Latin America</h3>
-        <p>Studies, articles, and presentations â€” from theory to product design.</p>
-        <a class="chip" href="media.html">Open â†’</a>
-      </article>
-      <article class="card" style="grid-column: span 6;">
-        <p class="meta">Education</p>
-        <h3>Accessible Web3 learning</h3>
-        <p>Visual content, talks, and sprints on coordination, privacy, and regenerative finance.</p>
-        <a class="chip" href="media.html">See content â†’</a>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="footer-inner">Â© <span id="y"></span> ReFaz â€” Marcelo & Verber</div>
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <footer>
+    <p>&copy; 2025 ReFaz0x. All rights reserved.</p>
+  </footer>
 </body>
 </html>
