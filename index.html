@@ -1,64 +1,67 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ReFaz â€” Philosophy, Culture & Web3</title>
-  <link rel="stylesheet" href="refaz.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReFaz0x — Home</title>
+  <meta name="description" content="ReFaz0x — Web3 research and development in Latin America." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="header">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <span class="brand-badge" aria-hidden="true"></span>
-      <h1>REFAZ</h1>
-    </a>
-    <div class="menu">
-      <a href="about.html">About</a>
-      <a href="media.html">Media</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+  <div class="wrap">
+    
+    <div class="nav-chips">
+      <a href="index.html" class="chip active">Home</a>
+      <a href="publications.html" class="chip">Publications</a>
+      <a href="projects.html" class="chip">Projects</a>
+      <a href="team.html" class="chip">Team</a>
     </div>
-  </nav>
-</header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="hero-card">
-      <div class="kicker">Philosophy â€¢ Culture â€¢ Web3</div>
-      <h2>ReFaz is the research & creation studio of <em>Marcelo Silva</em> & <em>Verber Souza</em>.</h2>
-      <p>We investigate and apply Web3 with a critical eye, pop language, and commitment to real impact â€” from local-first experiments to institutional dialogues.</p>
-      <div class="cta-row">
-        <a class="chip purple" href="about.html">Meet the team</a>
-        <a class="chip yellow" href="media.html">Read content</a>
-        <a class="chip green" href="projects.html">See projects</a>
+    <header class="top">
+      <img src="logo.png" alt="ReFaz0x Logo" class="avatar" style="object-fit: contain; background: white;" />
+      <div class="info">
+        <h1>ReFaz0x</h1>
+        <p class="lead">
+          Web3 research and development exploring blockchain, regenerative finance, and decentralized systems in Latin America.
+        </p>
+        <p>
+          Bridging technology, law, and community-driven innovation to address complex challenges across the region.
+        </p>
+      </div>
+    </header>
+
+    <div class="section">
+      <h2>Highlights</h2>
+      <div class="list">
+        <article class="card">
+          <h3>Publications</h3>
+          <p class="meta">Research on ReFi, RWAs, stablecoins, and Web3 community building.</p>
+          <p><a class="chip pink" href="publications.html">Browse Publications →</a></p>
+        </article>
+        <article class="card">
+          <h3>Projects</h3>
+          <p class="meta">Active contributions across Latin America's Web3 ecosystem.</p>
+          <p><a class="chip green" href="projects.html">See Projects →</a></p>
+        </article>
+        <article class="card">
+          <h3>Team</h3>
+          <p class="meta">Meet the founders building at the intersection of Web3, law, and social impact.</p>
+          <p><a class="chip yellow" href="team.html">Meet the Team →</a></p>
+        </article>
       </div>
     </div>
-    <div class="media-block">REFAZ BRANDING / ART</div>
-  </section>
+  </div>
 
-  <section class="section">
-    <h2>Highlights</h2>
-    <div class="grid">
-      <article class="card" style="grid-column: span 6;">
-        <p class="meta">Research</p>
-        <h3>Stablecoins, RWAs & ReFi in Latin America</h3>
-        <p>Studies, articles, and presentations â€” from theory to product design.</p>
-        <a class="chip" href="media.html">Open â†’</a>
-      </article>
-      <article class="card" style="grid-column: span 6;">
-        <p class="meta">Education</p>
-        <h3>Accessible Web3 learning</h3>
-        <p>Visual content, talks, and sprints on coordination, privacy, and regenerative finance.</p>
-        <a class="chip" href="media.html">See content â†’</a>
-      </article>
-    </div>
-  </section>
-</main>
+  <footer>
+    <div>© <span id="y"></span> ReFaz0x.</div>
+  </footer>
 
-<footer class="footer">
-  <div class="footer-inner">Â© <span id="y"></span> ReFaz â€” Marcelo & Verber</div>
-</footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
