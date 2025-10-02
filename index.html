@@ -1,496 +1,66 @@
-I'll extract the home page content from the artifact for you to copy to GitHub:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Lab - Web3 & Blockchain Innovation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      min-height: 100vh;
-    }
-    .glass-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    }
-    .nav-link {
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      transform: translateY(-2px);
-      color: #e0b3ff;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-20px); }
-    }
-    .floating {
-      animation: float 6s ease-in-out infinite;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReFaz0x — Home</title>
+  <meta name="description" content="ReFaz0x — Web3 research and development in Latin America." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="text-white font-sans">
-  <div id="root"></div>
-  
-  <script type="module">
-    import React, { useState } from 'https://cdn.skypack.dev/react@18.2.0';
-    import ReactDOM from 'https://cdn.skypack.dev/react-dom@18.2.0/client';
+<body>
+  <div class="wrap">
+    
+    <div class="nav-chips">
+      <a href="index.html" class="chip active">Home</a>
+      <a href="publications.html" class="chip">Publications</a>
+      <a href="projects.html" class="chip">Projects</a>
+      <a href="team.html" class="chip">Team</a>
+    </div>
 
-    function ResearchLab() {
-      const [activeSection, setActiveSection] = useState('home');
+    <header class="top">
+      <img src="logo.png" alt="ReFaz0x Logo" class="avatar" style="object-fit: contain; background: white;" />
+      <div class="info">
+        <h1>ReFaz0x</h1>
+        <p class="lead">
+          Web3 research and development exploring blockchain, regenerative finance, and decentralized systems in Latin America.
+        </p>
+        <p>
+          Bridging technology, law, and community-driven innovation to address complex challenges across the region.
+        </p>
+      </div>
+    </header>
 
-      return (
-        <div className="min-h-screen">
-          {/* Navigation */}
-          <nav className="glass-card mx-6 my-6 p-6 sticky top-6 z-50">
-            <div className="max-w-7xl mx-auto flex justify-between items-center">
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
-                Research Lab
-              </h1>
-              <div className="flex gap-8">
-                {['Home', 'Research', 'Team', 'Publications', 'Projects', 'Contact'].map((item) => (
-                  
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
-                    className="nav-link font-medium"
-                    onClick={() => setActiveSection(item.toLowerCase())}
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </nav>
+    <div class="section">
+      <h2>Highlights</h2>
+      <div class="list">
+        <article class="card">
+          <h3>Publications</h3>
+          <p class="meta">Research on ReFi, RWAs, stablecoins, and Web3 community building.</p>
+          <p><a class="chip pink" href="publications.html">Browse Publications →</a></p>
+        </article>
+        <article class="card">
+          <h3>Projects</h3>
+          <p class="meta">Active contributions across Latin America's Web3 ecosystem.</p>
+          <p><a class="chip green" href="projects.html">See Projects →</a></p>
+        </article>
+        <article class="card">
+          <h3>Team</h3>
+          <p class="meta">Meet the founders building at the intersection of Web3, law, and social impact.</p>
+          <p><a class="chip yellow" href="team.html">Meet the Team →</a></p>
+        </article>
+      </div>
+    </div>
+  </div>
 
-          {/* Main Content */}
-          <div className="max-w-7xl mx-auto px-6 py-12">
-            {/* Hero Section */}
-            <section id="home" className="mb-24 text-center">
-              <div className="floating inline-block mb-8">
-                <div className="text-8xl">🔬</div>
-              </div>
-              <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
-                Advancing Web3 & Blockchain Research
-              </h2>
-              <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-                Exploring the frontiers of decentralized systems, regenerative finance, and community-driven innovation in Latin America and beyond.
-              </p>
-            </section>
+  <footer>
+    <div>© <span id="y"></span> ReFaz0x.</div>
+  </footer>
 
-            {/* Research Areas */}
-            <section id="research" className="mb-24">
-              <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Research Areas
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-5xl mb-4">🌱</div>
-                  <h3 className="text-2xl font-bold mb-4">Regenerative Finance</h3>
-                  <p className="text-gray-200 leading-relaxed">
-                    Investigating sustainable economic models, climate solutions, and community-driven regenerative practices across Latin America.
-                  </p>
-                </div>
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-5xl mb-4">💰</div>
-                  <h3 className="text-2xl font-bold mb-4">Digital Assets & DeFi</h3>
-                  <p className="text-gray-200 leading-relaxed">
-                    Analyzing stablecoins, real-world asset tokenization, and decentralized finance applications for financial inclusion.
-                  </p>
-                </div>
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-5xl mb-4">🤝</div>
-                  <h3 className="text-2xl font-bold mb-4">Community Coordination</h3>
-                  <p className="text-gray-200 leading-relaxed">
-                    Developing frameworks and tools for grassroots organizing, DAO governance, and local-first Web3 initiatives.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Team Section */}
-            <section id="team" className="mb-24">
-              <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Our Team
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <a 
-                  href="https://marcelosilva.eth.limo" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="glass-card p-8 text-center hover:scale-105 transition-transform cursor-pointer"
-                >
-                  <div className="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl font-bold">
-                    MS
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Marcelo Silva</h3>
-                  <p className="text-gray-400 mb-4">Web3 Researcher & Founder</p>
-                  <p className="text-sm text-gray-300 leading-relaxed">
-                    Exploring blockchain, regenerative finance, and local-first innovation in Latin America. Enthusiast of the intersection of Web3, Climate, and International Development.
-                  </p>
-                </a>
-                
-                <a 
-                  href="https://verbersouza.github.io" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="glass-card p-8 text-center hover:scale-105 transition-transform cursor-pointer"
-                >
-                  <div className="w-32 h-32 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl font-bold">
-                    VS
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Verber Souza</h3>
-                  <p className="text-gray-400 mb-4">Lawyer & Blockchain Project Manager</p>
-                  <p className="text-sm text-gray-300 leading-relaxed">
-                    Creating solutions at the intersection of technology, law, and decentralized systems to address complex humanitarian challenges.
-                  </p>
-                </a>
-              </div>
-            </section>
-
-            {/* Publications Section */}
-            <section id="publications" className="mb-24">
-              <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Publications
-              </h2>
-              <div className="space-y-6">
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Web3 Community Building Handbook</h3>
-                  <p className="text-gray-400 mb-4">Paragraph — ReFaz</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    A handbook with the main concepts, challenges, and tooling for web3 community building in Latin America.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Stablecoins, RWAs, and ReFi in Latin America</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Comprehensive study on stablecoins, real world assets, and regenerative finance across Latin America.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Regenerative Finance Continental Mapping</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    A continental mapping of Regenerative Finance initiatives and communities.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Stablecoins in Brazil's Financial System</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Research on the role and adoption of stablecoins within Brazil's financial system.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Impact Capital Allocation in Latin America</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Exploring bottlenecks and opportunities in allocating capital for impact in Latin America.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Tokenization and RWAs in LatAm</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Insights on tokenization of real world assets and the landscape in Latin America.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">GiraHub Web3 Field Notes</h3>
-                  <p className="text-gray-400 mb-4">Paragraph — ReFaz</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Field notes on the creation of GiraHub Web3 and why grassroots energy matters.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Tokenization, Regulation, and Builders in LatAm</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Conference takeaways: tokenization, regulation, and builders' role in the region's growth.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Building ETH Kipu: A Latin American Journey</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Romina shares her journey building ETH Kipu and reflections on Latin America's Web3 movement.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Community Building and Financial Inclusion</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Anthony discusses community building and financial inclusion through Celo Africa DAO and CKash.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">ReFi Medellín and Funding the Commons</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Tereza reflects on her work with ReFi Medellín and the global Funding the Commons ecosystem.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Muda, Cambiatus, and Alternative Economies</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Luiz shares lessons from Muda, Cambiatus, and alternative economies in Latin America.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Odisea: Regenerative Economies & Culture</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Cush presents Odisea's vision for regenerative economies and cultural transformation.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Grassroots Community Building</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Gus discusses grassroots community building and the Bankless Brazil movement.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Modular Rollups and Ecosystem Coordination</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Notes on modular rollups and ecosystem coordination in LatAm.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Local-First Innovation in Bahia</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Local-first innovation in Bahia: pilots, learnings, and next steps.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Regional Research Overview</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Overview of funded research directions and teams across the region.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">From Grassroots to Regional Strategy</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    From grassroots coordination to regional strategy.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Ecosystem Impact and Partnerships</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Ecosystem impact, partnerships, and a mission-driven path.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Research Call: RWAs, Stablecoins & ReFi</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Inviting researchers to explore RWAs, stablecoins, and ReFi applications.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">On-Chain Tools for Sustainable Growth</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    How on-chain tools can unlock sustainable growth in LatAm.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Building Better Incentives</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    On unintended consequences and how to build better incentives.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Impact Capital Flow Analysis</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Where does impact capital go—and why?
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Builder Ecosystem Implications</h3>
-                  <p className="text-gray-400 mb-4">CeLatam (Medium)</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Implications for builders and the broader ecosystem.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Web3 Practitioner Primer</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Primer for practitioners entering the space.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">2025 Regional Roadmap</h3>
-                  <p className="text-gray-400 mb-4">CeLatam</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    2025 roadmap: priorities, selection criteria, and regional focus.
-                  </p>
-                </div>
-                
-                <div className="glass-card p-6 hover:scale-[1.02] transition-transform">
-                  <h3 className="text-xl font-bold mb-2">Ethereum 10 Years: Opening Doors for a Prohibited World</h3>
-                  <p className="text-gray-400 mb-4">Medium</p>
-                  <p className="text-gray-300 leading-relaxed">
-                    Reflecting on Ethereum's decade as a tool for global coordination and the expansion of the infinite garden.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Projects Section */}
-            <section id="projects" className="mb-24">
-              <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Current Projects
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-4">🌱</div>
-                  <h3 className="text-2xl font-bold mb-4">Regenerative Finance Mapping</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Continental research initiative mapping ReFi communities, projects, and impact across Latin America.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">ReFi</span>
-                    <span className="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Latin America</span>
-                    <span className="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Research</span>
-                  </div>
-                </div>
-                
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-4">💰</div>
-                  <h3 className="text-2xl font-bold mb-4">Stablecoin Adoption Study</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Comprehensive analysis of stablecoin usage, real-world applications, and financial inclusion potential in emerging markets.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">DeFi</span>
-                    <span className="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Stablecoins</span>
-                    <span className="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Finance</span>
-                  </div>
-                </div>
-                
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-4">🏛️</div>
-                  <h3 className="text-2xl font-bold mb-4">Real World Assets Tokenization</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Exploring frameworks, regulatory landscapes, and practical implementations of RWA tokenization in Latin America.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">RWA</span>
-                    <span className="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Tokenization</span>
-                    <span className="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Legal</span>
-                  </div>
-                </div>
-                
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-4">🤝</div>
-                  <h3 className="text-2xl font-bold mb-4">Web3 Community Building</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Documentation of grassroots coordination strategies, tooling, and frameworks for building resilient Web3 communities.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">Community</span>
-                    <span className="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Coordination</span>
-                    <span className="px-3 py-1 bg-blue-500/20 rounded-full text-sm">DAO</span>
-                  </div>
-                </div>
-                
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-4">🌍</div>
-                  <h3 className="text-2xl font-bold mb-4">Impact Capital Allocation</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Research on bottlenecks, opportunities, and mechanisms for allocating capital toward social and environmental impact.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">Impact</span>
-                    <span className="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Capital</span>
-                    <span className="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Public Goods</span>
-                  </div>
-                </div>
-                
-                <div className="glass-card p-8 hover:scale-105 transition-transform">
-                  <div className="text-4xl mb-4">🔧</div>
-                  <h3 className="text-2xl font-bold mb-4">Local-First Innovation Labs</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    Pilot programs and field experiments testing Web3 solutions for local communities, with focus on practical implementation.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">Pilots</span>
-                    <span className="px-3 py-1 bg-pink-500/20 rounded-full text-sm">Innovation</span>
-                    <span className="px-3 py-1 bg-blue-500/20 rounded-full text-sm">Local</span>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Contact Section */}
-            <section id="contact" className="mb-24">
-              <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Get In Touch
-              </h2>
-              <div className="glass-card p-12 max-w-2xl mx-auto text-center">
-                <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                  Interested in collaboration or learning more about our research?
-                </p>
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
-                  Contact Us
-                </button>
-              </div>
-            </section>
-          </div>
-
-          {/* Footer */}
-          <footer className="glass-card mx-6 mb-6 p-8 text-center">
-            <p className="text-gray-300">© 2024 Research Lab. Advancing Web3 & Blockchain Innovation.</p>
-          </footer>
-        </div>
-      );
-    }
-
-    const root = ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<ResearchLab />);
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-```
