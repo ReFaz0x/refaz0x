@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — ReFaz0x</title>
+  <meta name="description" content="Active contributions across Latin America's Web3 ecosystem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    
+    <a href="index.html" class="chip home-btn">🏠 Home</a>
+    
+    <header class="top">
+      <img src="logo.png" alt="ReFaz0x Logo" class="avatar" style="object-fit: contain; background: white;" />
+      <div class="info">
+        <h1>Projects</h1>
+        <p class="lead">Active contributions across Latin America's Web3 ecosystem.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Example Projects</h2>
+      <div class="list">
+        <article class="card">
+          <h3>🌱 GreenChain Brasil</h3>
+          <p class="meta">Carbon credit tracking for Amazon conservation</p>
+          <p>ReFaz0x provides technical architecture and legal framework development for a blockchain-based carbon credit system. We're helping design smart contracts that ensure transparent tracking of conservation efforts.</p>
+        </article>
+
+        <article class="card">
+          <h3>🏘️ FavelaDAO</h3>
+          <p class="meta">Community governance for urban development</p>
+          <p>We're supporting the development of decentralized governance structures that give favela communities direct control over development funding. Our role includes creating legal structures that bridge traditional Brazilian law with DAO governance.</p>
+        </article>
+<article class="card">
+          <h3>💧 AquaToken</h3>
+          <p class="meta">Water resource management through tokenization</p>
+          <p>ReFaz0x is developing the legal and technical framework for tokenizing water rights in drought-affected regions. We're creating smart contract systems that enable transparent water allocation.</p>
+        </article>
+
+        <article class="card">
+          <h3>🌾 AgriConnect</h3>
+          <p class="meta">Direct farmer-to-market blockchain platform</p>
+          <p>We provide blockchain infrastructure and legal advisory for connecting small farmers directly with buyers. Our work includes developing supply chain tracking smart contracts and creating cooperative governance models.</p>
+        </article>
+
+        <article class="card">
+          <h3>🏥 SaúdeChain</h3>
+          <p class="meta">Decentralized health records for underserved communities</p>
+          <p>ReFaz0x is architecting a privacy-preserving health record system for communities with limited healthcare access. We're developing LGPD-compliant smart contracts.</p>
+        </article>
+
+        <article class="card">
+          <h3>📚 EduChain</h3>
+          <p class="meta">Blockchain credentials for alternative education</p>
+          <p>We're building a credential verification system for non-traditional educational programs in Latin America. Our work includes developing NFT-based certification systems.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> ReFaz0x.</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
