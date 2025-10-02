@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ReFaz0x — Home</title>
-  <meta name="description" content="ReFaz0x — Web3 research and development in Latin America." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReFaz0x - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline adjustment for logo size */
+    .logo {
+      width: 130%; /* Increased by 30% */
+      max-width: 300px; /* optional max width */
+      height: auto;
+    }
+
+    /* Basic avatar styling */
+    .team-avatar {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    /* Link hover style */
+    a {
+      text-decoration: none;
+      color: #1a73e8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    
-    <div class="nav-chips">
-      <a href="index.html" class="chip active">Home</a>
-      <a href="publications.html" class="chip">Publications</a>
-      <a href="projects.html" class="chip">Projects</a>
-      <a href="team.html" class="chip">Team</a>
-    </div>
+  <header>
+    <img src="images/logo.png" alt="ReFaz0x Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header class="top">
-      <img src="logo.png" alt="ReFaz0x Logo" class="avatar" style="object-fit: contain; background: white;" />
-      <div class="info">
-        <h1>ReFaz0x</h1>
-        <p class="lead">
-          Web3 research and development exploring blockchain, regenerative finance, and decentralized systems in Latin America.
-        </p>
-        <p>
-          Bridging technology, law, and community-driven innovation to address complex challenges across the region.
-        </p>
-      </div>
-    </header>
+  <main>
+    <section id="intro">
+      <h1>Welcome to ReFaz0x</h1>
+      <p>Exploring Web3, ReFi, and decentralized solutions in Latin America.</p>
+    </section>
 
-    <div class="section">
-      <h2>Highlights</h2>
-      <div class="list">
-        <article class="card">
-          <h3>Publications</h3>
-          <p class="meta">Research on ReFi, RWAs, stablecoins, and Web3 community building.</p>
-          <p><a class="chip pink" href="publications.html">Browse Publications →</a></p>
-        </article>
-        <article class="card">
-          <h3>Projects</h3>
-          <p class="meta">Active contributions across Latin America's Web3 ecosystem.</p>
-          <p><a class="chip green" href="projects.html">See Projects →</a></p>
-        </article>
-        <article class="card">
-          <h3>Team</h3>
-          <p class="meta">Meet the founders building at the intersection of Web3, law, and social impact.</p>
-          <p><a class="chip yellow" href="team.html">Meet the Team →</a></p>
-        </article>
+    <section id="highlights">
+      <h2>Latest Initiatives</h2>
+      <ul>
+        <li><a href="publications.html">Explore our publications</a></li>
+        <li><a href="projects.html">Discover our projects</a></li>
+      </ul>
+    </section>
+
+    <section id="team-preview">
+      <h2>Meet Our Team</h2>
+      <div class="team-member">
+        <img src="images/verber.jpg" alt="Verber Souza" class="team-avatar">
+        <p>Verber Souza</p>
+        <p>Blockchain & Education Lead</p>
       </div>
-    </div>
-  </div>
+      <!-- Add other team members as needed -->
+    </section>
+  </main>
 
   <footer>
-    <div>© <span id="y"></span> ReFaz0x.</div>
+    <p>&copy; 2025 ReFaz0x. All rights reserved.</p>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
