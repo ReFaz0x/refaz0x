@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team - Research Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+    .nav-link {
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      transform: translateY(-2px);
+      color: #e0b3ff;
+    }
+    .profile-card {
+      transition: all 0.4s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px 0 rgba(31, 38, 135, 0.5);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Navigation -->
+  <nav class="glass-card mx-6 my-6 p-6 sticky top-6 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
+        Research Lab
+      </h1>
+      <div class="flex gap-8">
+        <a href="index.html" class="nav-link font-medium">Home</a>
+        <a href="index.html#research" class="nav-link font-medium">Research</a>
+        <a href="team.html" class="nav-link font-medium text-purple-300">Team</a>
+        <a href="index.html#publications" class="nav-link font-medium">Publications</a>
+        <a href="index.html#projects" class="nav-link font-medium">Projects</a>
+        <a href="index.html#contact" class="nav-link font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Page Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-200 to-pink-200 bg-clip-text text-transparent">
+        Meet Our Team
+      </h1>
+      <p class="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+        Dedicated researchers and innovators working at the intersection of Web3, regenerative finance, and community-driven solutions.
+      </p>
+    </div>
+
+    <!-- Team Members -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-20">
+      <!-- Marcelo Silva -->
+      <a 
+        href="https://marcelosilva.eth.limo" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="profile-card glass-card p-10 cursor-pointer"
+      >
+        <div class="text-center mb-6">
+          <div class="w-40 h-40 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center text-5xl font-bold shadow-2xl">
+            MS
+          </div>
+          <h2 class="text-3xl font-bold mb-2">Marcelo Silva</h2>
+          <p class="text-purple-300 text-lg mb-1">aka MarceloReFi</p>
+          <p class="text-gray-400 text-lg">Web3 Researcher & Founder</p>
+        </div>
+        
+        <div class="space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            Web3 researcher and founder exploring blockchain, regenerative finance, and local-first innovation in Latin America. Based in Brazil.
+          </p>
+          <p class="leading-relaxed">
+            Enthusiast of the intersection of Web3, Climate, and International Development from a civilian point of view.
+          </p>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-gray-400/30">
+          <h3 class="font-bold mb-3 text-purple-300">Areas of Focus:</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-purple-500/30 rounded-full text-sm">Regenerative Finance</span>
+            <span class="px-3 py-1 bg-pink-500/30 rounded-full text-sm">Web3 Research</span>
+            <span class="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Community Building</span>
+            <span class="px-3 py-1 bg-green-500/30 rounded-full text-sm">Climate Action</span>
+            <span class="px-3 py-1 bg-yellow-500/30 rounded-full text-sm">Latin America</span>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <span class="inline-flex items-center text-purple-300 font-semibold">
+            View Full Profile 
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Verber Souza -->
+      <a 
+        href="https://verbersouza.github.io" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="profile-card glass-card p-10 cursor-pointer"
+      >
+        <div class="text-center mb-6">
+          <div class="w-40 h-40 bg-gradient-to-br from-pink-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center text-5xl font-bold shadow-2xl">
+            VS
+          </div>
+          <h2 class="text-3xl font-bold mb-2">Verber Souza</h2>
+          <p class="text-pink-300 text-lg mb-1">aka Verbal</p>
+          <p class="text-gray-400 text-lg">Lawyer & Blockchain Project Manager</p>
+        </div>
+        
+        <div class="space-y-4 text-gray-300">
+          <p class="leading-relaxed">
+            Lawyer and blockchain project manager creating solutions at the intersection of technology, law, and decentralized systems.
+          </p>
+          <p class="leading-relaxed">
+            Focused on addressing complex humanitarian challenges through innovative legal frameworks and blockchain technology.
+          </p>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-gray-400/30">
+          <h3 class="font-bold mb-3 text-pink-300">Areas of Focus:</h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-pink-500/30 rounded-full text-sm">Blockchain Law</span>
+            <span class="px-3 py-1 bg-purple-500/30 rounded-full text-sm">Project Management</span>
+            <span class="px-3 py-1 bg-blue-500/30 rounded-full text-sm">Decentralized Systems</span>
+            <span class="px-3 py-1 bg-green-500/30 rounded-full text-sm">Humanitarian Tech</span>
+            <span class="px-3 py-1 bg-orange-500/30 rounded-full text-sm">Legal Innovation</span>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <span class="inline-flex items-center text-pink-300 font-semibold">
+            View Full Profile 
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Collaboration Section -->
+    <div class="glass-card p-12 max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Our Collaborative Approach
+      </h2>
+      <p class="text-lg text-gray-200 leading-relaxed mb-6">
+        We believe in the power of interdisciplinary collaboration, combining expertise in technology, law, research, and community building to create meaningful impact in the Web3 ecosystem.
+      </p>
+      <p class="text-lg text-gray-200 leading-relaxed">
+        Our work spans Latin America and beyond, focusing on regenerative finance, decentralized governance, and building tools that empower communities to create sustainable, equitable futures.
+      </p>
+    </div>
+
+    <!-- Join Us Section -->
+    <div class="glass-card p-12 max-w-4xl mx-auto text-center">
+      <div class="text-5xl mb-6">🤝</div>
+      <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        Interested in Collaborating?
+      </h2>
+      <p class="text-lg text-gray-200 mb-8 leading-relaxed">
+        We're always looking for passionate researchers, builders, and community leaders who share our vision for a more regenerative and equitable Web3 ecosystem.
+      </p>
+      <a href="index.html#contact">
+        <button class="bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
+          Get In Touch
+        </button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="glass-card mx-6 mb-6 mt-12 p-8 text-center">
+    <p class="text-gray-300">© 2024 Research Lab. Advancing Web3 & Blockchain Innovation.</p>
+  </footer>
+</body>
+</html>
