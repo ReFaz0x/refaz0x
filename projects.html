@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — ReFaz0x</title>
+  <meta name="description" content="Active projects and contributions from ReFaz0x across Latin America." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+
 <a href="index.html" class="chip home-btn">🏠 Home</a>
 
 <header class="top">
@@ -15,9 +30,9 @@
     <article class="card">
       <h3>🌱 Tokenized Green Bonds</h3>
       <p class="meta">National Treasury Hackathon — Brazil</p>
-      <p>ReFaz0x developed blockchain-based mechanisms for sustainable finance at the National Treasury’s official hackathon. The project integrated automation, tokenization, and transparent reporting standards.</p>
+      <p>ReFaz0x developed blockchain-based mechanisms for sustainable finance at the National Treasury's official hackathon. The project integrated automation, tokenization, and transparent reporting standards.</p>
       <ul>
-        <li>Collaboration with Brazil’s Government National Treasury</li>
+        <li>Collaboration with Brazil's Government National Treasury</li>
         <li>ISSB-aligned automation system for green bonds</li>
         <li>Impact measurement and ranking framework on blockchain</li>
       </ul>
@@ -26,9 +41,11 @@
     <article class="card">
       <h3>🌍 Ekonavi</h3>
       <p class="meta">LIFT Lab — Central Bank of Brazil</p>
-      <p>A blockchain-native platform for verifiable environmental and socio-economic data. Selected by the Central Bank’s innovation lab to design data-proof solutions for regenerative finance.</p>
+      <span class="topic-tag legal">Legal Engineering</span>
+      <span class="topic-tag research">Research</span>
+      <p>A blockchain-native platform for verifiable environmental and socio-economic data. Selected by the Central Bank's innovation lab to design data-proof solutions for regenerative finance.</p>
       <ul>
-        <li>Part of the Central Bank of Brazil’s LIFT Lab</li>
+        <li>Part of the Central Bank of Brazil's LIFT Lab</li>
         <li>Blockchain system for tamper-proof environmental data</li>
         <li>Designed for climate finance and biodiversity-linked assets</li>
       </ul>
@@ -37,6 +54,7 @@
     <article class="card">
       <h3>🛰️ Liga</h3>
       <p class="meta">Independent Technical Advisory</p>
+      <span class="topic-tag legal">Legal Engineering</span>
       <p>ReFaz0x provided technical and governance advisory for geospatial Web3 solutions, ensuring compliance, scalability, and responsible integration of decentralized infrastructures.</p>
       <ul>
         <li>Independent evaluation of blockchain/Web3 architecture</li>
@@ -60,5 +78,17 @@
 </section>
 
 <footer>
+  <div class="footer-links">
+    <a href="about.html" class="chip">About</a>
+    <a href="contact.html" class="chip">Contact</a>
+  </div>
   <div>© <span id="y"></span> ReFaz0x.</div>
 </footer>
+
+</div>
+
+<script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

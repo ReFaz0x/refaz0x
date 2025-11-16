@@ -23,42 +23,57 @@
       </div>
     </header>
 
+    <!-- Search Box -->
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search publications by title, author, or topic..." 
+        onkeyup="filterPublications()"
+      />
+    </div>
+
     <section class="section">
       <h2>2025</h2>
       <div class="list">
-        <article class="card">
-          <h3>Ethereum 10 years: opening doors for a prohibited world</h3>
+        <article class="card publication-item">
+          <h3><a href="https://medium.com/@verbersouza" target="_blank" rel="noopener">Ethereum 10 years: opening doors for a prohibited world</a></h3>
           <p class="meta">Verber Souza • Medium</p>
+          <span class="topic-tag research">Research</span>
           <p>Reflecting on Ethereum's decade as a tool for global coordination and the expansion of the infinite garden.</p>
         </article>
         
-        <article class="card">
-          <h3>Tokenização de Ativos Reais (RWA) em 2025</h3>
+        <article class="card publication-item">
+          <h3><a href="https://mirror.xyz/verbersouza.eth" target="_blank" rel="noopener">Tokenização de Ativos Reais (RWA) em 2025</a></h3>
           <p class="meta">Verber Souza • Mirror</p>
+          <span class="topic-tag research">Research</span>
           <p>Analysis of real-world asset tokenization trends and investment market insights for 2025.</p>
         </article>
         
-        <article class="card">
+        <article class="card publication-item">
           <h3><a href="https://www.canva.com/design/DAGrGKUrXWE/1OeElUOz6_H71W-dYoQIrA/view?utm_content=DAGrGKUrXWE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h536dd989ce" target="_blank" rel="noopener">How to build Web3 Communities in Latin America - Handbook</a></h3>
           <p class="meta">Marcelo Silva • Paragraph — ReFaz</p>
           <p>A handbook with the main concepts, challenges, and tooling for web3 community building in Latin America.</p>
         </article>
         
-        <article class="card">
+        <article class="card publication-item">
           <h3><a href="https://docsend.com/view/pmjbehm8tj2c3xin" target="_blank" rel="noopener">Full Research: Hacking Growth — Stablecoins, RWA, and ReFi in Latin America</a></h3>
           <p class="meta">Marcelo Silva • CeLatam</p>
+          <span class="topic-tag research">Research</span>
           <p>Comprehensive study on stablecoins, real world assets, and regenerative finance across Latin America.</p>
         </article>
         
-        <article class="card">
+        <article class="card publication-item">
           <h3><a href="https://docsend.com/view/y8cnt8exwznbb6ap" target="_blank" rel="noopener">Mapping ReFi in LatAm</a></h3>
           <p class="meta">Marcelo Silva • CeLatam</p>
+          <span class="topic-tag research">Research</span>
           <p>A continental mapping of Regenerative Finance initiatives and communities.</p>
         </article>
         
-        <article class="card">
+        <article class="card publication-item">
           <h3><a href="https://docsend.com/view/jsmqrcu97hg57jjf" target="_blank" rel="noopener">Stablecoins in Brazil</a></h3>
           <p class="meta">Marcelo Silva • CeLatam</p>
+          <span class="topic-tag research">Research</span>
           <p>Research on the role and adoption of stablecoins within Brazil's financial system.</p>
         </article>
         
@@ -271,27 +286,31 @@
     <section class="section">
       <h2>Thematic Collections</h2>
       <div class="list">
-        <article class="card">
-          <h3>DeFi: finanças descentralizadas numa perspectiva de raça (I)</h3>
+        <article class="card publication-item">
+          <h3><a href="https://mirror.xyz/verbersouza.eth" target="_blank" rel="noopener">DeFi: finanças descentralizadas numa perspectiva de raça (I)</a></h3>
           <p class="meta">Verber Souza • Mirror</p>
+          <span class="topic-tag research">Research</span>
           <p>Examining decentralized finance through the lens of race and social equity.</p>
         </article>
         
-        <article class="card">
-          <h3>ReFi: tecnologia para impacto ambiental</h3>
+        <article class="card publication-item">
+          <h3><a href="https://mirror.xyz/verbersouza.eth" target="_blank" rel="noopener">ReFi: tecnologia para impacto ambiental</a></h3>
           <p class="meta">Verber Souza • Mirror</p>
+          <span class="topic-tag research">Research</span>
           <p>Examining regenerative finance technologies and their environmental impact potential.</p>
         </article>
         
-        <article class="card">
-          <h3>Blockchain for Humanitarian Crisis: A New Paradigm for Justice</h3>
+        <article class="card publication-item">
+          <h3><a href="https://medium.com/@verbersouza" target="_blank" rel="noopener">Blockchain for Humanitarian Crisis: A New Paradigm for Justice</a></h3>
           <p class="meta">Verber Souza • Medium</p>
+          <span class="topic-tag research">Research</span>
           <p>Exploring how blockchain technologies can transform crisis response and justice mechanisms.</p>
         </article>
         
-        <article class="card">
-          <h3>Blockchain Legal (I): Cibercultura e Direito</h3>
+        <article class="card publication-item">
+          <h3><a href="https://mirror.xyz/verbersouza.eth" target="_blank" rel="noopener">Blockchain Legal (I): Cibercultura e Direito</a></h3>
           <p class="meta">Verber Souza • Mirror</p>
+          <span class="topic-tag legal">Legal Engineering</span>
           <p>First part of a series exploring the intersection of cyberculture and legal frameworks in blockchain.</p>
         </article>
       </div>
@@ -340,12 +359,33 @@
     </section>
 
     <footer>
+      <div class="footer-links">
+        <a href="about.html" class="chip">About</a>
+        <a href="contact.html" class="chip">Contact</a>
+      </div>
       <div>© <span id="y"></span> ReFaz0x.</div>
     </footer>
   </div>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    function filterPublications() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toLowerCase();
+      const publications = document.getElementsByClassName('publication-item');
+
+      for (let i = 0; i < publications.length; i++) {
+        const card = publications[i];
+        const text = card.textContent || card.innerText;
+        
+        if (text.toLowerCase().indexOf(filter) > -1) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      }
+    }
   </script>
 </body>
 </html>
