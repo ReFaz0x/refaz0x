@@ -1,139 +1,446 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Legal Engineering — ReFaz0x</title>
-  <meta name="description" content="Legal Framework for Digital Assets — ReFaz0x" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Engineering — ReFaz0x</title>
+    <meta name="description" content="Legal Framework for Digital Assets — ReFaz0x" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #fafafa;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: white;
+            padding: 2rem 2rem 1.5rem;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: #999;
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .header-top {
+            margin-bottom: 0;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .department-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            max-width: 800px;
+        }
+
+        /* Institutional Programs */
+        .institutional-section {
+            background: white;
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .institutional-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2.5rem;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+
+        .program-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .logos-group {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .logo-frame {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .logo-frame img {
+            max-width: 70%;
+            max-height: 70%;
+            object-fit: contain;
+        }
+
+        .program-caption {
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: #666;
+            text-align: center;
+            line-height: 1.3;
+            max-width: 200px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 2rem 2rem;
+            background: #fafafa;
+        }
+
+        /* Case Studies */
+        .case-studies {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .case-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+            margin-bottom: 1.25rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .case-card:hover {
+            border-color: #1a1a1a;
+        }
+
+        .case-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-meta {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .case-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            background: #f5f5f5;
+            color: #666;
+            border: 1px solid #e8e8e8;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-link {
+            font-size: 0.85rem;
+            color: #999;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #333;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .institutional-content {
+                justify-content: flex-start;
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .header {
+                padding: 1.5rem 1rem 1rem;
+            }
+
+            .institutional-section {
+                padding: 1rem;
+            }
+
+            .institutional-content {
+                gap: 1.5rem;
+            }
+
+            .logo-frame {
+                width: 60px;
+                height: 60px;
+            }
+
+            .program-caption {
+                font-size: 0.7rem;
+                max-width: 150px;
+            }
+
+            .content-section {
+                padding: 1.5rem 1rem;
+            }
+
+            .case-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    
-    <a href="index.html" class="chip home-btn">🏠 Home</a>
-    
-    <header class="top">
-      <img src="logo.png" alt="ReFaz0x Logo" class="avatar" style="object-fit: contain; background: white;" />
-      <div class="info">
-        <h1>Legal Framework for Digital Assets</h1>
-        <p class="lead">
-          Technical-legal expertise in Web3, combining blockchain technology knowledge with 
-          regulatory compliance and legal structuring for digital assets in Latin America.
-        </p>
-      </div>
-    </header>
+    <div class="header">
+        <div class="header-content">
+            <a href="index.html" class="back-link">← Voltar para Home</a>
+            
+            <div class="header-top">
+                <div class="header-info">
+                    <div class="department-label">REFAZ LEGAL ENGINEERING</div>
+                    <h1 class="title">Legal Framework for Digital Assets</h1>
+                    <p class="subtitle">
+                        Technical-legal expertise combining blockchain technology knowledge with regulatory 
+                        compliance and legal structuring for digital assets in Latin America.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <section class="section">
-      <h2>Our Legal Services</h2>
-      <p>
-        We provide specialized legal advisory for the digital asset ecosystem, bridging technical 
-        blockchain infrastructure with Brazilian and Latin American regulatory frameworks.
-      </p>
+    <!-- Institutional Programs -->
+    <section class="institutional-section">
+        <div class="institutional-content">
+            <div class="program-item">
+                <div class="logos-group">
+                    <div class="logo-frame">
+                        <img src="law-logos/tesouro.png" alt="Tesouro Nacional">
+                    </div>
+                    <div class="logo-frame">
+                        <img src="law-logos/bid.png" alt="BID">
+                    </div>
+                    <div class="logo-frame">
+                        <img src="law-logos/serpro.png" alt="SERPRO">
+                    </div>
+                </div>
+                <p class="program-caption">Hackaton Tokenização Tesouro Nacional</p>
+            </div>
 
-      <div class="list">
-        <article class="card">
-          <h3>1. Digital Asset Structuring</h3>
-          <p>
-            Tokenization and digital asset structuring in compliance with Brazilian regulation. 
-            We design legal frameworks for token issuance, asset-backed tokens, and digital securities 
-            that meet regulatory requirements while maintaining technical innovation.
-          </p>
-        </article>
+            <div class="program-item">
+                <div class="logos-group">
+                    <div class="logo-frame">
+                        <img src="law-logos/g20.png" alt="G20">
+                    </div>
+                </div>
+                <p class="program-caption">Hackaton G20 TechPrize</p>
+            </div>
 
-        <article class="card">
-          <h3>2. DAO & Protocol Legal Design</h3>
-          <p>
-            Legal advisory for Decentralized Autonomous Organizations (DAOs) and decentralized protocols. 
-            We structure governance frameworks, participation rules, and liability protections adapted 
-            to Latin American legal contexts.
-          </p>
-        </article>
+            <div class="program-item">
+                <div class="logos-group">
+                    <div class="logo-frame">
+                        <img src="law-logos/banco-central.png" alt="Banco Central">
+                    </div>
+                </div>
+                <p class="program-caption">Lift Lab - Laboratório Inovação Financeira</p>
+            </div>
 
-        <article class="card">
-          <h3>3. Data-Proof Audit Systems</h3>
-          <p>
-            Development of audit systems with cryptographic proofs for legal processes. We design 
-            evidence collection and verification mechanisms using blockchain technology for litigation 
-            and regulatory compliance.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>4. RWA Compliance</h3>
-          <p>
-            Real World Asset (RWA) tokenization and regulatory compliance. We structure legal frameworks 
-            for bringing traditional assets on-chain while maintaining full regulatory compliance in 
-            Brazilian and international jurisdictions.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>5. Civil Litigation</h3>
-          <p>
-            Legal representation in civil litigation involving digital assets, smart contracts, 
-            and blockchain-related disputes. We combine traditional litigation expertise with 
-            deep technical understanding of Web3 systems.
-          </p>
-        </article>
-      </div>
+            <div class="program-item">
+                <div class="logos-group">
+                    <div class="logo-frame">
+                        <img src="law-logos/issb.png" alt="ISSB">
+                    </div>
+                </div>
+                <p class="program-caption">ISSB Standards</p>
+            </div>
+        </div>
     </section>
 
-    <section class="section">
-      <h2>Research & Cases</h2>
-      <div class="list">
-        <article class="card">
-          <h3>Ekonavi</h3>
-          <p class="meta">Sustainable Financial Assets Structuring</p>
-          <p>
-            Legal structuring for sustainable asset tokenization, combining environmental impact 
-            verification with financial compliance frameworks for regenerative finance projects.
-          </p>
-        </article>
+    <!-- Case Studies Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Case Portfolio</h2>
+            </div>
 
-        <article class="card">
-          <h3>Liga Colaborativa</h3>
-          <p class="meta">Data-Proof Audit System</p>
-          <p>
-            Development of blockchain-based data management and audit systems for humanitarian 
-            crisis response, ensuring cryptographic proof of evidence for legal accountability.
-          </p>
-        </article>
+            <div class="case-studies">
+                <article class="case-card">
+                    <div class="case-label">REGENERATIVE FINANCE</div>
+                    <h3 class="case-title">Ekonavi</h3>
+                    <p class="case-meta">Sustainable Financial Assets Structuring</p>
+                    <p class="case-description">
+                        Development of infrastructure for tokenized digital assets for carbon credits and regenerative finance; 
+                        CVM reports and compliance; ISSB standards and taxonomy; on-chain data management.
+                    </p>
+                    <div class="case-tags">
+                        <span class="tag">#digital_assets</span>
+                        <span class="tag">#ISSB</span>
+                        <span class="tag">#report</span>
+                        <span class="tag">#refi</span>
+                    </div>
+                </article>
 
-        <article class="card">
-          <h3>Celo RWA Latin America Research</h3>
-          <p class="meta">Real World Asset Tokenization Framework</p>
-          <p>
-            Comprehensive legal and technical research on Real World Asset tokenization opportunities 
-            and regulatory frameworks across Latin American markets.
-          </p>
-        </article>
+                <article class="case-card">
+                    <div class="case-label">HUMANITARIAN TECHNOLOGY</div>
+                    <h3 class="case-title">Liga Colaborativa</h3>
+                    <p class="case-meta">Data-Proof Audit System for Crisis Response</p>
+                    <p class="case-description">
+                        Blockchain-based data management and audit systems for humanitarian crisis solutions; 
+                        legal engineering with proof of evidence and accountability; legal case optimization.
+                    </p>
+                </article>
 
-        <article class="card">
-          <h3>Ethereum Foundation Legal Scholar Research</h3>
-          <p class="meta">Blockchain Legal Frameworks</p>
-          <p>
-            Academic research on legal frameworks for blockchain technology, smart contract enforcement, 
-            and decentralized governance systems in emerging markets.
-          </p>
-        </article>
-      </div>
+                <article class="case-card">
+                    <div class="case-label">REGIONAL RESEARCH</div>
+                    <h3 class="case-title">Celo RWA Latin America Research</h3>
+                    <p class="case-meta">Real World Asset Tokenization Framework</p>
+                    <p class="case-description">
+                        Legal and technical research on RWA tokenization opportunities across Latin American markets. 
+                        Analysis of cross-border compliance, custody solutions, and regulatory frameworks for asset digitalization.
+                    </p>
+                </article>
+
+                <article class="case-card">
+                    <div class="case-label">ACADEMIC RESEARCH</div>
+                    <h3 class="case-title">Ethereum Foundation Legal Scholar</h3>
+                    <p class="case-meta">Blockchain Legal Frameworks for Emerging Markets</p>
+                    <p class="case-description">
+                        Academic research on blockchain governance and management potential for vulnerable regions. 
+                        Investigation of decentralized systems for social impact, community-driven solutions, 
+                        and technology frameworks for underserved populations.
+                    </p>
+                </article>
+            </div>
+        </div>
     </section>
 
     <footer>
-      <div class="footer-links">
-        <a href="about.html" class="chip">About</a>
-        <a href="contact.html" class="chip">Contact</a>
-      </div>
-      <div>© <span id="y"></span> ReFaz0x.</div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="about.html" class="footer-link">About</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+                <a href="index.html" class="footer-link">Home</a>
+            </div>
+            <div class="footer-copy">© <span id="year"></span> ReFaz0x. All rights reserved.</div>
+        </div>
     </footer>
 
-  </div>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <script>
+        // Dynamic year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
