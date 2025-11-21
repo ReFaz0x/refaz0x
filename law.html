@@ -31,11 +31,27 @@
         .header {
             background: white;
             padding: 2rem 2rem 1.5rem;
+            position: relative;
         }
 
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .refaz-logo {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            opacity: 0.9;
+        }
+
+        .refaz-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         .back-link {
@@ -53,6 +69,7 @@
 
         .header-top {
             margin-bottom: 0;
+            padding-right: 80px;
         }
 
         .header-info {
@@ -113,7 +130,7 @@
             align-items: center;
         }
 
-        .logo-frame {
+        .logo-link {
             width: 70px;
             height: 70px;
             border-radius: 50%;
@@ -125,13 +142,14 @@
             background: white;
             flex-shrink: 0;
             transition: border-color 0.3s ease;
+            text-decoration: none;
         }
 
-        .logo-frame:hover {
+        .logo-link:hover {
             border-color: #1a1a1a;
         }
 
-        .logo-frame img {
+        .logo-link img {
             max-width: 70%;
             max-height: 70%;
             object-fit: contain;
@@ -281,6 +299,17 @@
                 padding: 1.5rem 1rem 1rem;
             }
 
+            .refaz-logo {
+                top: 1.5rem;
+                right: 1rem;
+                width: 50px;
+                height: 50px;
+            }
+
+            .header-top {
+                padding-right: 60px;
+            }
+
             .institutional-section {
                 padding: 1rem;
             }
@@ -289,7 +318,7 @@
                 gap: 1.5rem;
             }
 
-            .logo-frame {
+            .logo-link {
                 width: 60px;
                 height: 60px;
             }
@@ -311,6 +340,10 @@
 </head>
 <body>
     <div class="header">
+        <div class="refaz-logo">
+            <img src="logo.png" alt="ReFaz0x">
+        </div>
+        
         <div class="header-content">
             <a href="index.html" class="back-link">← Voltar para Home</a>
             
@@ -332,13 +365,13 @@
         <div class="institutional-content">
             <div class="program-item">
                 <div class="logos-group">
-                    <a href="https://www.gov.br/tesouronacional/pt-br/noticias/hackathon-web3-tokenizacao-do-tesouro-nacional-anuncia-os-vencedores" target="_blank" rel="noopener noreferrer" class="logo-frame">
+                    <a href="https://www.gov.br/tesouronacional/pt-br/noticias/hackathon-web3-tokenizacao-do-tesouro-nacional-anuncia-os-vencedores" target="_blank" rel="noopener noreferrer" class="logo-link">
                         <img src="law logos/bacen.png" alt="Tesouro Nacional">
                     </a>
-                    <a href="https://www.bis.org/hub/2024_g20_techsprint.htm" target="_blank" rel="noopener noreferrer" class="logo-frame">
+                    <a href="https://www.bis.org/hub/2024_g20_techsprint.htm" target="_blank" rel="noopener noreferrer" class="logo-link">
                         <img src="law logos/bis.png" alt="BIS">
                     </a>
-                    <a href="https://www.serpro.gov.br/menu/noticias/noticias-2023/hackathon-tokenizacao-do-tesouro-nacional" target="_blank" rel="noopener noreferrer" class="logo-frame">
+                    <a href="https://www.serpro.gov.br/menu/noticias/noticias-2023/hackathon-tokenizacao-do-tesouro-nacional" target="_blank" rel="noopener noreferrer" class="logo-link">
                         <img src="law logos/serpro.png" alt="SERPRO">
                     </a>
                 </div>
@@ -347,7 +380,7 @@
 
             <div class="program-item">
                 <div class="logos-group">
-                    <a href="https://www.bcb.gov.br/acessoinformacao/g20-techsprint-2024" target="_blank" rel="noopener noreferrer" class="logo-frame">
+                    <a href="https://www.bcb.gov.br/acessoinformacao/g20-techsprint-2024" target="_blank" rel="noopener noreferrer" class="logo-link">
                         <img src="law logos/g20.png" alt="G20">
                     </a>
                 </div>
@@ -356,7 +389,7 @@
 
             <div class="program-item">
                 <div class="logos-group">
-                    <a href="https://www.liftlab.com.br/" target="_blank" rel="noopener noreferrer" class="logo-frame">
+                    <a href="https://www.liftlab.com.br/" target="_blank" rel="noopener noreferrer" class="logo-link">
                         <img src="law logos/lift.png" alt="Lift Lab">
                     </a>
                 </div>
@@ -365,7 +398,7 @@
 
             <div class="program-item">
                 <div class="logos-group">
-                    <a href="https://www.ifrs.org/groups/international-sustainability-standards-board/" target="_blank" rel="noopener noreferrer" class="logo-frame">
+                    <a href="https://www.ifrs.org/groups/international-sustainability-standards-board/" target="_blank" rel="noopener noreferrer" class="logo-link">
                         <img src="law logos/ifrs.png" alt="IFRS - ISSB">
                     </a>
                 </div>
