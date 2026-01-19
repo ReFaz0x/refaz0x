@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — ReFaz</title>
+  <link rel="stylesheet" href="refaz.css">
+  <style>
+    .project-card {
+      background: #fff;
+      border: 2px solid #000;
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+    }
+    .project-card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 .25rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .project-card .subtitle {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-bottom: .75rem;
+    }
+    .project-card p {
+      margin: .5rem 0;
+      line-height: 1.5;
+    }
+    .project-card ul {
+      margin: .75rem 0 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .project-card li {
+      margin: .25rem 0;
+    }
+    .project-card .tags {
+      display: flex;
+      gap: .5rem;
+      margin: .75rem 0;
+      flex-wrap: wrap;
+    }
+    .project-card .tag {
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .25rem .6rem;
+      border-radius: 6px;
+      border: 1.5px solid #000;
+    }
+    .tag.legal { background: #f3e8ff; color: #7c3aed; border-color: #7c3aed; }
+    .tag.research { background: #fce7f3; color: #db2777; border-color: #db2777; }
+    .project-card .link-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: .5rem 1rem;
+      background: var(--refaz-purple);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: .9rem;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .project-card .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(93, 49, 214, 0.3);
+    }
+    .page-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .page-header img {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+    }
+    .page-header h1 {
+      font-size: 1.75rem;
+      margin: 0;
+    }
+    .page-header p {
+      margin: .25rem 0 0;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <a class="brand" href="index.html"><span class="brand-badge"></span><h1>REFAZ</h1></a>
+    <div class="menu">
+      <a href="about.html">About</a><a href="Media.html">Media</a><a href="projects.html">Projects</a><a href="bne/index.html">BnE</a><a href="Contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="section">
+    <div class="page-header">
+      <div>
+        <h1>Projects</h1>
+        <p>Active contributions across Latin America's Web3 ecosystem.</p>
+      </div>
+    </div>
+
+    <h2>Highlighted Projects</h2>
+
+    <article class="project-card">
+      <h3>🌱 Tokenized Green Bonds</h3>
+      <p class="subtitle">National Treasury Hackathon — Brazil</p>
+      <p>ReFaz0x developed blockchain-based mechanisms for sustainable finance at the National Treasury's official hackathon. The project integrated automation, tokenization, and transparent reporting standards.</p>
+      <ul>
+        <li>Collaboration with Brazil's Government National Treasury</li>
+        <li>ISSB-aligned automation system for green bonds</li>
+        <li>Impact measurement and ranking framework on blockchain</li>
+      </ul>
+      <a class="link-btn" href="https://www.youtube.com/live/qVJ6S1poFBM?si=G3-8qB4Z8AiY0g2R&t=6010" target="_blank" rel="noopener">Watch Presentation →</a>
+    </article>
+
+    <article class="project-card">
+      <h3>🌍 Ekonavi</h3>
+      <p class="subtitle">LIFT Lab — Central Bank of Brazil</p>
+      <div class="tags">
+        <span class="tag legal">Legal Engineering</span>
+        <span class="tag research">Research</span>
+      </div>
+      <p>A blockchain-native platform for verifiable environmental and socio-economic data. Selected by the Central Bank's innovation lab to design data-proof solutions for regenerative finance.</p>
+      <ul>
+        <li>Part of the Central Bank of Brazil's LIFT Lab</li>
+        <li>Blockchain system for tamper-proof environmental data</li>
+        <li>Designed for climate finance and biodiversity-linked assets</li>
+      </ul>
+      <a class="link-btn" href="https://ekonavi.com" target="_blank" rel="noopener">Visit Ekonavi →</a>
+    </article>
+
+    <article class="project-card">
+      <h3>🛰️ Liga</h3>
+      <p class="subtitle">Independent Technical Advisory</p>
+      <div class="tags">
+        <span class="tag legal">Legal Engineering</span>
+      </div>
+      <p>ReFaz0x provided technical and governance advisory for geospatial Web3 solutions, ensuring compliance, scalability, and responsible integration of decentralized infrastructures.</p>
+      <ul>
+        <li>Independent evaluation of blockchain/Web3 architecture</li>
+        <li>Geo-based solutions for governance and data privacy</li>
+        <li>Advisory on privacy, compliance, and interoperability</li>
+      </ul>
+      <a class="link-btn" href="https://www.liga.green/" target="_blank" rel="noopener">Visit Liga →</a>
+    </article>
+
+    <article class="project-card">
+      <h3>📚 Blockchain na Escola</h3>
+      <p class="subtitle">Education Program — Brazil</p>
+      <p>A pioneering initiative bringing blockchain and Web3 education to public schools and universities. The program combines gamified learning with hands-on use of digital wallets, NFTs, and DAOs.</p>
+      <ul>
+        <li>Education-as-a-Service model for digital literacy</li>
+        <li>Curriculum development for blockchain and Web3 fundamentals</li>
+        <li>Implemented in public schools and academic institutions</li>
+      </ul>
+      <a class="link-btn" href="bne/index.html">Explore BnE Section →</a>
+    </article>
+  </section>
+</main>
+
+<footer class="footer"><div class="footer-inner">© <span id="y"></span> ReFaz</div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
